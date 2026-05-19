@@ -227,7 +227,7 @@ export default function PremiumStaysPage() {
             color: '#555555',
             fontWeight: '300',
           }}>
-            Situated above the mist line in Attuvampatti, Kodaikanal, Cloud Walks' premium suites represent
+            Situated above the mist line in Attuvampatti, Kodaikanal, Cloud Walks&apos; premium suites represent
             the ideal middle ground between intimate boutique warmth and genuine 5-star quality. Each suite
             has been individually designed with bespoke furniture, premium bedding, refined lighting, and
             curated views — so that every moment spent inside feels as memorable as the landscape outside.

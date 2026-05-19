@@ -531,7 +531,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   letterSpacing: '0.02em',
                   lineHeight: '1.3'
                 }}>
-                  Escape to Kodaikanal's High Peaks
+                  Escape to Kodaikanal&apos;s High Peaks
                 </h3>
 
                 <p style={{

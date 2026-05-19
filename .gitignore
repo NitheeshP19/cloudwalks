@@ -13,3 +13,10 @@ media cache
 *.mp4
 *.mov
 *.zip
+node_modules
+.next
+.vercel
+
+*.mp4
+*.mov
+*.zip

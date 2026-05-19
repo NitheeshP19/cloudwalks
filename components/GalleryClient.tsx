@@ -29,6 +29,20 @@ export default function GalleryClient({ roomsImages, natureImages }: GalleryClie
     return img.category === activeTab;
   });
 
+  const closeLightbox = React.useCallback(() => {
+    setLightboxIndex(null);
+    setIsZoomed(false);
+  }, []);
+
+  const navigateLightbox = React.useCallback((direction: number) => {
+    setLightboxIndex(prevIndex => {
+      if (prevIndex === null) return null;
+      setIsZoomed(false);
+      const total = filteredImages.length;
+      return (prevIndex + direction + total) % total;
+    });
+  }, [filteredImages.length]);
+
   // Handle keyboard events in lightbox
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -43,7 +57,7 @@ export default function GalleryClient({ roomsImages, natureImages }: GalleryClie
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxIndex, filteredImages]);
+  }, [lightboxIndex, closeLightbox, navigateLightbox]);
 
   // Lock scroll when lightbox is open
   useEffect(() => {
@@ -63,19 +77,6 @@ export default function GalleryClient({ roomsImages, natureImages }: GalleryClie
     setIsZoomed(false);
   };
 
-  const closeLightbox = () => {
-    setLightboxIndex(null);
-    setIsZoomed(false);
-  };
-
-  const navigateLightbox = (direction: number) => {
-    if (lightboxIndex === null) return;
-    setIsZoomed(false);
-    const total = filteredImages.length;
-    const nextIndex = (lightboxIndex + direction + total) % total;
-    setLightboxIndex(nextIndex);
-  };
-
   const toggleZoom = () => {
     setIsZoomed(!isZoomed);
   };
@@ -89,14 +90,14 @@ export default function GalleryClient({ roomsImages, natureImages }: GalleryClie
       {/* Category Tabs */}
       <div className="filter-tabs-wrapper">
         <div className="filter-tabs">
-          {[
+          {([
             { id: 'all', label: 'All Masterpieces' },
             { id: 'rooms', label: 'Premium Rooms' },
             { id: 'nature', label: 'Nature & Cottage Views' }
-          ].map(tab => (
+          ] as const).map(tab => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
+              onClick={() => setActiveTab(tab.id)}
               className={`filter-tab ${activeTab === tab.id ? 'active' : ''}`}
             >
               {tab.label}

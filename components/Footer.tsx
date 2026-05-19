@@ -240,7 +240,7 @@ export default function Footer() {
                   <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
                 </svg>
                 <div>
-                  <p style={{ fontFamily: 'var(--font-cinzel), serif', fontSize: '0.78rem', fontWeight: '700', color: '#ffffff', letterSpacing: '0.1em', margin: '0 0 3px 0' }}>TRAVELLERS' CHOICE</p>
+                  <p style={{ fontFamily: 'var(--font-cinzel), serif', fontSize: '0.78rem', fontWeight: '700', color: '#ffffff', letterSpacing: '0.1em', margin: '0 0 3px 0' }}>TRAVELLERS&apos; CHOICE</p>
                   <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.72rem', color: 'rgba(255,255,255,0.35)', margin: 0 }}>Top-rated Kodaikanal Stay</p>
                 </div>
               </div>
