@@ -1,0 +1,22 @@
+node_modules
+.next
+.vercel
+dist
+build
+.env
+.env.local
+.log
+npm-debug.log
+
+media cache
+
+*.mp4
+*.mov
+*.zip
+node_modules
+.next
+.vercel
+
+*.mp4
+*.mov
+*.zip
