@@ -1,0 +1,16 @@
+# System Prerequisites
+node>=18.17.0
+npm>=9.0.0
+
+# Core Framework Dependencies
+next==16.2.6
+react==19.2.4
+react-dom==19.2.4
+
+# Development & Compilation Requirements
+typescript>=5.0.0
+@types/node>=20.0.0
+@types/react>=19.0.0
+@types/react-dom>=19.0.0
+eslint>=9.0.0
+eslint-config-next==16.2.6
