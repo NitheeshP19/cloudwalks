@@ -3,9 +3,9 @@ node>=18.17.0
 npm>=9.0.0
 
 # Core Framework Dependencies
-next==16.2.6
-react==19.2.4
-react-dom==19.2.4
+next>=15.0.0
+react>=19.0.0
+react-dom>=19.0.0
 
 # Development & Compilation Requirements
 typescript>=5.0.0
