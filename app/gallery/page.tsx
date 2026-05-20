@@ -738,12 +738,12 @@ export default function GalleryPage() {
             Indulge in misty mountain walks, premium custom rooms, and warm fire lit cottages in the heart of Kodaikanal. Book your dream vacation today.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/#contact-us">
+            <Link href="/contact">
               <button className="luxury-button" style={{ padding: '1.2rem 3rem' }}>
                 CHECK ROOM AVAILABILITY
               </button>
             </Link>
-            <Link href="/#contact-us">
+            <Link href="/contact">
               <button 
                 className="luxury-outline-button" 
                 style={{ 

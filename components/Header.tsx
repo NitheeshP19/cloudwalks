@@ -13,7 +13,7 @@ const navLinks = [
   { label: 'LUXURY COTTAGES', href: '/best-luxury-cottages-in-kodaikanal' },
   { label: 'GALLERY', href: '/gallery' },
   { label: 'BLOG', href: '/blog' },
-  { label: 'CONTACT US', href: '/#contact-us' },
+  { label: 'CONTACT US', href: '/contact' },
 ];
 
 
@@ -42,7 +42,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isDarkHero = pathname === '/' || pathname === '/best-luxury-cottages-in-kodaikanal' || pathname === '/affordable-premium-rooms' || pathname === '/premium-stays' || pathname === '/blog' || pathname === '/curated-romantic-rooms-for-couples-in-kodaikanal' || pathname === '/budget-friendly-premium-wood-house-stay-in-kodaikanal' || pathname === '/family-friendly-hotel-in-kodaikanal' || pathname === '/luxury-villas-in-kodaikanal' || pathname === '/gallery' || pathname === '/budget-queen-rooms-in-kodaikanal';
+  const isDarkHero = pathname === '/' || pathname === '/best-luxury-cottages-in-kodaikanal' || pathname === '/affordable-premium-rooms' || pathname === '/premium-stays' || pathname === '/blog' || pathname === '/curated-romantic-rooms-for-couples-in-kodaikanal' || pathname === '/budget-friendly-premium-wood-house-stay-in-kodaikanal' || pathname === '/family-friendly-hotel-in-kodaikanal' || pathname === '/luxury-villas-in-kodaikanal' || pathname === '/gallery' || pathname === '/budget-queen-rooms-in-kodaikanal' || pathname === '/contact';
   const themeColor = isScrolled ? '#1a1a1a' : (isDarkHero ? '#ffffff' : 'var(--primary)');
 
 
@@ -52,7 +52,7 @@ const Header = () => {
       el.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
     } else {
-      window.location.href = '/#contact-us';
+      window.location.href = '/contact';
     }
   };
 
@@ -245,7 +245,7 @@ const Header = () => {
                       : item === 'BLOG'
                         ? '/blog'
                         : item === 'CONTACT'
-                          ? '/#contact-us'
+                          ? '/contact'
                           : `#${item.toLowerCase()}`
                 }
                 style={{

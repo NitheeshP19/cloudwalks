@@ -10,7 +10,7 @@ export default function Footer() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     } else {
-      window.location.href = '/#contact-us';
+      window.location.href = '/contact';
     }
   };
 
@@ -220,7 +220,7 @@ export default function Footer() {
                 { label: 'Photo Gallery', href: '/gallery' },
                 { label: 'Blog & Travel Stories', href: '/blog' },
                 { label: 'Luxury Villas', href: '/luxury-villas-in-kodaikanal' },
-                { label: 'Contact & Booking', href: '/#contact-us' },
+                { label: 'Contact & Booking', href: '/contact' },
               ].map((link) => (
                 <Link key={link.label} href={link.href}
                   style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.88rem', fontWeight: '400', color: 'rgba(255,255,255,0.45)', textDecoration: 'none', transition: 'all 0.25s ease', display: 'flex', alignItems: 'center', gap: '10px' }}

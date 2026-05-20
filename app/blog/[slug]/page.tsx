@@ -550,7 +550,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
 
                 <div style={{ marginTop: '0.8rem' }}>
-                  <Link href="/#contact-us">
+                  <Link href="/contact">
                     <button className="luxury-button" style={{ width: '100%', padding: '0.9rem', fontSize: '0.75rem', letterSpacing: '0.15em' }}>
                       BOOK YOUR ESCAPE
                     </button>

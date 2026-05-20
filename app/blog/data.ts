@@ -286,7 +286,7 @@ export const blogPosts: BlogPost[] = [
         type: 'cta',
         title: 'Book Your Ultimate Kodaikanal Getaway',
         text: 'Nestled in the quiet, misty heights of Attuvampatti, Cloud Walks Homestay offers the perfect blend of secluded luxury, scenic views, and warm hospitality. Choose from our luxury cottages, premium rooms, or budget stays.',
-        link: '/#contact-us',
+        link: '/contact',
         linkText: 'RESERVE YOUR STAY NOW'
       }
     ]
