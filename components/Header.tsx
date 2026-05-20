@@ -41,7 +41,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isDarkHero = pathname === '/' || pathname === '/best-luxury-cottages-in-kodaikanal' || pathname === '/affordable-premium-rooms' || pathname === '/premium-stays' || pathname === '/blog' || pathname === '/curated-romantic-rooms-for-couples-in-kodaikanal' || pathname === '/budget-friendly-premium-wood-house-stay-in-kodaikanal' || pathname === '/family-friendly-hotel-in-kodaikanal' || pathname === '/luxury-villas-in-kodaikanal' || pathname === '/gallery' || pathname === '/budget-queen-rooms-in-kodaikanal' || pathname === '/contact';
+  const isDarkHero = pathname === '/' || pathname === '/best-luxury-cottages-in-kodaikanal' || pathname === '/affordable-premium-rooms' || pathname === '/premium-stays' || pathname === '/blog' || pathname === '/curated-romantic-rooms-for-couples-in-kodaikanal' || pathname === '/budget-friendly-premium-wood-house-stay-in-kodaikanal' || pathname === '/family-friendly-hotel-in-kodaikanal' || pathname === '/luxury-villas-in-kodaikanal' || pathname === '/budget-queen-rooms-in-kodaikanal' || pathname === '/contact';
   const themeColor = isScrolled ? '#1a1a1a' : (isDarkHero ? '#ffffff' : 'var(--primary)');
 
 
