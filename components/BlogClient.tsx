@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { blogPosts, BlogPost } from '@/app/blog/data';
+import { blogPosts } from '@/app/blog/data';
 
 const BlogClient = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');

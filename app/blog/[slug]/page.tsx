@@ -6,7 +6,7 @@ import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import LuxuryCottagesFAQ from '@/components/LuxuryCottagesFAQ';
-import { blogPosts, BlogPost } from '../data';
+import { blogPosts } from '../data';
 
 // Next.js 16 dynamic route types
 interface PageProps {

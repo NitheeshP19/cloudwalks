@@ -99,7 +99,7 @@ const PromiseSection = () => {
           gap: '2.5rem',
           justifyContent: 'center'
         }}>
-          {promises.map((promise, index) => (
+          {promises.map((promise) => (
             <div
               key={promise.title}
               style={{
