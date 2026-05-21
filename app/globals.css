@@ -195,3 +195,23 @@ a {
   }
 }
 
+
+/* Premium Image Preloader Styles */
+@keyframes premiumPreloaderPulse {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(0.96);
+    opacity: 0.55;
+  }
+}
+
+.premium-preloader-pulse {
+  animation: premiumPreloaderPulse 2.5s ease-in-out infinite;
+}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import PreloadedImage from "@/components/PreloadedImage";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Script from "next/script";
@@ -257,7 +257,7 @@ export default function AffordableRoomsPage() {
                     zIndex: 2,
                     pointerEvents: 'none',
                   }} />
-                  <Image
+                  <PreloadedImage
                     src={room.image}
                     alt={room.title}
                     fill

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import PreloadedImage from "@/components/PreloadedImage";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Script from "next/script";
@@ -159,7 +159,7 @@ export default function LuxuryVillasPage() {
       }}>
         {/* Dynamic Image Background */}
         <div style={{ position: 'absolute', inset: 0, zIndex: -2 }}>
-          <Image
+          <PreloadedImage
             src="/gallery/cloud walks and home stay kodaikanal.png"
             alt="Luxury Villas in Kodaikanal - Breathtaking panoramic exterior of Cloud Walks estate"
             fill
@@ -339,7 +339,7 @@ export default function LuxuryVillasPage() {
                     pointerEvents: 'none'
                   }} />
                   
-                  <Image
+                  <PreloadedImage
                     src={room.image}
                     alt={room.title}
                     fill
@@ -477,7 +477,7 @@ export default function LuxuryVillasPage() {
                 }}
               >
                 <div style={{ position: 'relative', aspectRatio: '16 / 10', overflow: 'hidden' }}>
-                  <Image 
+                  <PreloadedImage 
                     src={item.src}
                     alt={item.title}
                     fill

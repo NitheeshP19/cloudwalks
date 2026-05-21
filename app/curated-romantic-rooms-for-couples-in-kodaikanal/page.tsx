@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import PreloadedImage from "@/components/PreloadedImage";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Script from "next/script";
@@ -102,7 +102,7 @@ export default function RomanticRoomsPage() {
       }}>
         {/* Dynamic Image Background */}
         <div style={{ position: 'absolute', inset: 0, zIndex: -2 }}>
-          <Image
+          <PreloadedImage
             src="/original-images/cloud walks home stay 43.jpg"
             alt="Romantic view in Kodaikanal at Cloud Walks"
             fill
@@ -281,7 +281,7 @@ export default function RomanticRoomsPage() {
                     pointerEvents: 'none'
                   }} />
                   
-                  <Image
+                  <PreloadedImage
                     src={room.image}
                     alt={room.title}
                     fill

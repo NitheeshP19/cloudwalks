@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import PreloadedImage from "@/components/PreloadedImage";
 import Header from "@/components/Header";
 import Script from "next/script";
 
@@ -83,7 +83,7 @@ export default function ContactPage() {
         overflow: 'hidden',
         zIndex: 1,
       }}>
-        <Image
+        <PreloadedImage
           src="/gallery/cloud walks 44.jpg"
           alt="Cloud Walks Kodaikanal View"
           fill

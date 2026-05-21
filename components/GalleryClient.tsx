@@ -131,6 +131,38 @@ export default function GalleryClient({ roomsImages, natureImages }: GalleryClie
                     onClick={() => openLightbox(globalIndex)}
                   >
                     <div className="image-wrapper">
+                      {/* Premium Preloader Overlay */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          inset: 0,
+                          zIndex: 10,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          background: 'radial-gradient(circle, #ffffff 0%, #f2efe7 100%)',
+                          opacity: loadedImages[image.id] ? 0 : 1,
+                          transform: loadedImages[image.id] ? 'scale(1.03)' : 'scale(1)',
+                          transition: 'opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)',
+                          pointerEvents: 'none',
+                        }}
+                      >
+                        <div
+                          className="premium-preloader-pulse"
+                          style={{
+                            position: 'relative',
+                            width: '50px',
+                            height: '89px',
+                            opacity: 0.85,
+                          }}
+                        >
+                          <img
+                            src="/preloader.png"
+                            alt="Loading..."
+                            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                          />
+                        </div>
+                      </div>
                       <img
                         src={image.src}
                         alt={image.alt}
@@ -172,6 +204,38 @@ export default function GalleryClient({ roomsImages, natureImages }: GalleryClie
                     onClick={() => openLightbox(globalIndex)}
                   >
                     <div className="image-wrapper">
+                      {/* Premium Preloader Overlay */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          inset: 0,
+                          zIndex: 10,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          background: 'radial-gradient(circle, #ffffff 0%, #f2efe7 100%)',
+                          opacity: loadedImages[image.id] ? 0 : 1,
+                          transform: loadedImages[image.id] ? 'scale(1.03)' : 'scale(1)',
+                          transition: 'opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)',
+                          pointerEvents: 'none',
+                        }}
+                      >
+                        <div
+                          className="premium-preloader-pulse"
+                          style={{
+                            position: 'relative',
+                            width: '50px',
+                            height: '89px',
+                            opacity: 0.85,
+                          }}
+                        >
+                          <img
+                            src="/preloader.png"
+                            alt="Loading..."
+                            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                          />
+                        </div>
+                      </div>
                       <img
                         src={image.src}
                         alt={image.alt}
@@ -206,6 +270,38 @@ export default function GalleryClient({ roomsImages, natureImages }: GalleryClie
                 onClick={() => openLightbox(index)}
               >
                 <div className="image-wrapper">
+                  {/* Premium Preloader Overlay */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      zIndex: 10,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: 'radial-gradient(circle, #ffffff 0%, #f2efe7 100%)',
+                      opacity: loadedImages[image.id] ? 0 : 1,
+                      transform: loadedImages[image.id] ? 'scale(1.03)' : 'scale(1)',
+                      transition: 'opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)',
+                      pointerEvents: 'none',
+                    }}
+                  >
+                    <div
+                      className="premium-preloader-pulse"
+                      style={{
+                        position: 'relative',
+                        width: '50px',
+                        height: '89px',
+                        opacity: 0.85,
+                      }}
+                    >
+                      <img
+                        src="/preloader.png"
+                        alt="Loading..."
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                      />
+                    </div>
+                  </div>
                   <img
                     src={image.src}
                     alt={image.alt}

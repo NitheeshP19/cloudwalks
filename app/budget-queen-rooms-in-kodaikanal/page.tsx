@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import PreloadedImage from "@/components/PreloadedImage";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Script from "next/script";
@@ -370,7 +370,7 @@ export default function BudgetQueenRoomsPage() {
                     zIndex: 2,
                     pointerEvents: 'none',
                   }} />
-                  <Image
+                  <PreloadedImage
                     src={room.image}
                     alt={`${room.title} - Budget Queen Room in Kodaikanal`}
                     fill
@@ -520,7 +520,7 @@ export default function BudgetQueenRoomsPage() {
                 }}
               >
                 <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
-                  <Image 
+                  <PreloadedImage 
                     src={item.src}
                     alt={`${item.title} - Cloud Walks Kodaikanal`}
                     fill

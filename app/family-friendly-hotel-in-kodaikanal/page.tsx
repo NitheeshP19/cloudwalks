@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import PreloadedImage from "@/components/PreloadedImage";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Script from "next/script";
@@ -144,7 +144,7 @@ export default function FamilyFriendlyHotelPage() {
       }}>
         {/* Dynamic Image Background */}
         <div style={{ position: 'absolute', inset: 0, zIndex: -2 }}>
-          <Image
+          <PreloadedImage
             src="/original-images/cloud walks 56.jpg"
             alt="Family Friendly Hotel in Kodaikanal - Beautiful exterior view at Cloud Walks"
             fill
@@ -324,7 +324,7 @@ export default function FamilyFriendlyHotelPage() {
                     pointerEvents: 'none'
                   }} />
                   
-                  <Image
+                  <PreloadedImage
                     src={room.image}
                     alt={room.title}
                     fill
@@ -462,7 +462,7 @@ export default function FamilyFriendlyHotelPage() {
                 }}
               >
                 <div style={{ position: 'relative', aspectRatio: '16 / 10', overflow: 'hidden' }}>
-                  <Image 
+                  <PreloadedImage 
                     src={item.src}
                     alt={item.title}
                     fill

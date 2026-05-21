@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import PreloadedImage from '@/components/PreloadedImage';
 import { blogPosts } from '@/app/blog/data';
 
 const BlogClient = () => {
@@ -41,7 +41,7 @@ const BlogClient = () => {
       }}>
         {/* Background Ambient Video & Fallback Image */}
         <div style={{ position: 'absolute', inset: 0, zIndex: -2 }}>
-          <Image
+          <PreloadedImage
             src="/gallery/cloud%20walks%20home%20stay%2043.jpg"
             alt="Misty Palani Hills Kodaikanal"
             fill
@@ -197,7 +197,7 @@ const BlogClient = () => {
             >
               {/* Cover Image */}
               <div style={{ flex: '1 1 600px', position: 'relative', minHeight: '400px', overflow: 'hidden' }}>
-                <Image
+                <PreloadedImage
                   src={featuredPost.coverImage}
                   alt={featuredPost.title}
                   fill
@@ -255,7 +255,7 @@ const BlogClient = () => {
                 {/* Author Info */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '0.5rem', borderTop: '1px solid rgba(197, 160, 89, 0.1)', paddingTop: '1.2rem' }}>
                   <div style={{ position: 'relative', width: '44px', height: '44px', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--primary)' }}>
-                    <Image
+                    <PreloadedImage
                       src={featuredPost.author.avatar}
                       alt={featuredPost.author.name}
                       fill
@@ -378,7 +378,7 @@ const BlogClient = () => {
               >
                 {/* Image Cover */}
                 <div style={{ position: 'relative', height: '240px', overflow: 'hidden' }}>
-                  <Image
+                  <PreloadedImage
                     src={post.coverImage}
                     alt={post.title}
                     fill
@@ -444,7 +444,7 @@ const BlogClient = () => {
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
                       <div style={{ position: 'relative', width: '32px', height: '32px', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--primary)' }}>
-                        <Image
+                        <PreloadedImage
                           src={post.author.avatar}
                           alt={post.author.name}
                           fill
@@ -567,7 +567,7 @@ const BlogClient = () => {
               >
                 {/* Cover Image */}
                 <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
-                  <Image
+                  <PreloadedImage
                     src={stay.image}
                     alt={stay.title}
                     fill

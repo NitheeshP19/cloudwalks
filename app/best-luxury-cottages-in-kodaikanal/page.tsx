@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import PreloadedImage from "@/components/PreloadedImage";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Script from "next/script";
@@ -271,7 +271,7 @@ export default function LuxuryCottagesPage() {
                     pointerEvents: 'none'
                   }} />
                   
-                  <Image
+                  <PreloadedImage
                     src={cottage.image}
                     alt={cottage.title}
                     fill

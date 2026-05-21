@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import PreloadedImage from '@/components/PreloadedImage';
 
 const images = [
   "/original-images/cloud%20walks%2026.jpg",
@@ -40,7 +40,7 @@ const BudgetHeroSlider = () => {
             zIndex: index === currentIndex ? 2 : 1,
           }}
         >
-          <Image
+          <PreloadedImage
             src={src}
             alt={altTexts[index]}
             fill

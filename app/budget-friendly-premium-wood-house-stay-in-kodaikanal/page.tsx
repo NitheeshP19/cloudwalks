@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import PreloadedImage from "@/components/PreloadedImage";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Script from "next/script";
@@ -128,7 +128,7 @@ export default function BudgetPremiumWoodHousePage() {
         isolation: 'isolate'
       }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: -2 }}>
-          <Image
+          <PreloadedImage
             src="/original-images/cloud walks 54.jpg"
             alt="Beautiful wooden house exterior in Kodaikanal"
             fill
@@ -288,7 +288,7 @@ export default function BudgetPremiumWoodHousePage() {
             {/* Block 1: Wood Architecture */}
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '4rem', flexWrap: 'wrap' }} className="gallery-block">
               <div style={{ flex: '1 1 500px', position: 'relative', aspectRatio: '4/3', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
-                <Image src="/original-images/cloud walks 49.jpg" alt="Stunning Wooden Architecture" fill style={{ objectFit: 'cover' }} className="zoom-img" />
+                <PreloadedImage src="/original-images/cloud walks 49.jpg" alt="Stunning Wooden Architecture" fill style={{ objectFit: 'cover' }} className="zoom-img" />
               </div>
               <div style={{ flex: '1 1 400px' }}>
                 <h3 style={{ fontFamily: 'var(--font-cinzel), serif', fontSize: '2rem', color: '#1a1a1a', marginBottom: '1.5rem' }}>Warm Wooden Interiors</h3>
@@ -301,7 +301,7 @@ export default function BudgetPremiumWoodHousePage() {
             {/* Block 2: Attic & Comfort */}
             <div style={{ display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', gap: '4rem', flexWrap: 'wrap' }} className="gallery-block">
               <div style={{ flex: '1 1 500px', position: 'relative', aspectRatio: '4/3', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
-                <Image src="/original-images/cloud walks 55.jpg" alt="Cozy Attic Wood House" fill style={{ objectFit: 'cover' }} className="zoom-img" />
+                <PreloadedImage src="/original-images/cloud walks 55.jpg" alt="Cozy Attic Wood House" fill style={{ objectFit: 'cover' }} className="zoom-img" />
               </div>
               <div style={{ flex: '1 1 400px' }}>
                 <h3 style={{ fontFamily: 'var(--font-cinzel), serif', fontSize: '2rem', color: '#1a1a1a', marginBottom: '1.5rem' }}>Cozy Attic Retreats</h3>
@@ -314,7 +314,7 @@ export default function BudgetPremiumWoodHousePage() {
             {/* Block 3: Breathtaking Views */}
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '4rem', flexWrap: 'wrap' }} className="gallery-block">
               <div style={{ flex: '1 1 500px', position: 'relative', aspectRatio: '4/3', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
-                <Image src="/original-images/cloud walks 35.jpg" alt="Premium Comfort inside the Wood House" fill style={{ objectFit: 'cover' }} className="zoom-img" />
+                <PreloadedImage src="/original-images/cloud walks 35.jpg" alt="Premium Comfort inside the Wood House" fill style={{ objectFit: 'cover' }} className="zoom-img" />
               </div>
               <div style={{ flex: '1 1 400px' }}>
                 <h3 style={{ fontFamily: 'var(--font-cinzel), serif', fontSize: '2rem', color: '#1a1a1a', marginBottom: '1.5rem' }}>Bespoke Furnishings</h3>
@@ -327,7 +327,7 @@ export default function BudgetPremiumWoodHousePage() {
             {/* Block 4: Outdoor Ambiance */}
             <div style={{ display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', gap: '4rem', flexWrap: 'wrap' }} className="gallery-block">
               <div style={{ flex: '1 1 500px', position: 'relative', aspectRatio: '4/3', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
-                <Image src="/original-images/cloud walks 53.jpg" alt="Misty Outdoor Spaces" fill style={{ objectFit: 'cover' }} className="zoom-img" />
+                <PreloadedImage src="/original-images/cloud walks 53.jpg" alt="Misty Outdoor Spaces" fill style={{ objectFit: 'cover' }} className="zoom-img" />
               </div>
               <div style={{ flex: '1 1 400px' }}>
                 <h3 style={{ fontFamily: 'var(--font-cinzel), serif', fontSize: '2rem', color: '#1a1a1a', marginBottom: '1.5rem' }}>Step Out into Nature</h3>
@@ -341,7 +341,7 @@ export default function BudgetPremiumWoodHousePage() {
           
           {/* Final Large Showcase Image */}
           <div className="final-showcase" style={{ marginTop: '8rem', position: 'relative', height: '60vh', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.15)' }}>
-            <Image src="/original-images/cloud walks 34.jpg" alt="Cloud Walks Wood House Estate" fill style={{ objectFit: 'cover' }} className="zoom-img" />
+            <PreloadedImage src="/original-images/cloud walks 34.jpg" alt="Cloud Walks Wood House Estate" fill style={{ objectFit: 'cover' }} className="zoom-img" />
             <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ textAlign: 'center' }}>
                 <h2 style={{ fontFamily: 'var(--font-cinzel), serif', fontSize: 'clamp(2rem, 4vw, 3.5rem)', color: 'white', textShadow: '0 4px 15px rgba(0,0,0,0.6)', marginBottom: '2rem' }}>

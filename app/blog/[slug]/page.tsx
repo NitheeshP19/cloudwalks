@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
+import PreloadedImage from '@/components/PreloadedImage';
 import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
@@ -163,7 +163,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap', borderTop: '1px solid rgba(197, 160, 89, 0.15)', paddingTop: '1.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
                 <div style={{ position: 'relative', width: '48px', height: '48px', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--primary)' }}>
-                  <Image
+                  <PreloadedImage
                     src={post.author.avatar}
                     alt={post.author.name}
                     fill
@@ -221,7 +221,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               pointerEvents: 'none'
             }} />
 
-            <Image
+            <PreloadedImage
               src={post.coverImage}
               alt={post.title}
               fill
@@ -643,7 +643,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               >
                 {/* Cover Image */}
                 <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
-                  <Image
+                  <PreloadedImage
                     src={recPost.coverImage}
                     alt={recPost.title}
                     fill

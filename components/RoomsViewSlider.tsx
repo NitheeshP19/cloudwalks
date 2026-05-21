@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import Image from 'next/image';
+import PreloadedImage from '@/components/PreloadedImage';
 
 const slides = [
   { src: '/original-images/cloud walks 42.jpg', alt: 'Breathtaking mountain view from Cloud Walks rooms' },
@@ -139,7 +139,7 @@ const RoomsViewSlider: React.FC = () => {
             transition: 'opacity 0.9s ease',
             zIndex: 1,
           }}>
-            <Image
+            <PreloadedImage
               src={slides[prev].src}
               alt={slides[prev].alt}
               fill
@@ -157,7 +157,7 @@ const RoomsViewSlider: React.FC = () => {
           transition: 'opacity 0.9s ease',
           zIndex: 2,
         }}>
-          <Image
+          <PreloadedImage
             src={slides[current].src}
             alt={slides[current].alt}
             fill
@@ -321,7 +321,7 @@ const RoomsViewSlider: React.FC = () => {
             }}
             className="thumb-btn"
           >
-            <Image
+            <PreloadedImage
               src={slide.src}
               alt={slide.alt}
               fill

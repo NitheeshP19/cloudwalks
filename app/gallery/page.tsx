@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import PreloadedImage from "@/components/PreloadedImage";
 import Link from "next/link";
 import Header from "@/components/Header";
 import GalleryClient from "@/components/GalleryClient";
@@ -574,7 +574,7 @@ export default function GalleryPage() {
         overflow: 'hidden'
       }}>
         {/* Background Image with lighter overlay */}
-        <Image 
+        <PreloadedImage 
           src="/gallery/cloud%20walks%20and%20home%20stay%20kodaikanal.png" 
           alt="Cloud Walks Homestay Kodaikanal Photo Gallery" 
           fill 
@@ -672,7 +672,7 @@ export default function GalleryPage() {
               transform: 'rotate(2deg)'
             }}>
               <div style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden', borderRadius: '2px' }}>
-                <Image 
+                <PreloadedImage 
                   src="/gallery/cloud%20walks%2013.jpg" 
                   alt="Premium Misty View"
                   fill
