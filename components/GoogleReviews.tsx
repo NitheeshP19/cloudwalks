@@ -278,7 +278,7 @@ const GoogleReviews = () => {
                   fontFamily: 'var(--font-inter), sans-serif',
                   flexGrow: 1
                 }}>
-                  "{review.text}"
+                  &ldquo;{review.text}&rdquo;
                 </p>
               </div>
             ))}
