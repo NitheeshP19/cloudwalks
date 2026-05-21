@@ -17,7 +17,7 @@ const rooms = [
     image: "/gallery/cloud%20walks%20home%20stay%205.jpg"
   },
   {
-    title: "HONEYMOON SUITE BEDROOM",
+    title: "MISTY PINE FOREST",
     image: "/gallery/cloud%20walks%20home%20stay%203.jpg"
   },
   {
@@ -45,7 +45,7 @@ const rooms = [
     image: "/gallery/cloud%20walks%2034.jpg"
   },
   {
-    title: "GRAND PRESIDENTIAL VILLA",
+    title: "ROMANTIC HONEYMOON SUITE",
     image: "/gallery/cloud%20walks%20home%20stay%2043.jpg"
   },
   {
@@ -61,7 +61,7 @@ const rooms = [
     image: "/original-images/cloud%20walks%2026.jpg"
   },
   {
-    title: "PINE TREE CANOPIES",
+    title: "QUEEN PREMIUM BEDROOM",
     image: "/original-images/cloud%20walks%2030.jpg"
   },
   {
@@ -69,7 +69,7 @@ const rooms = [
     image: "/original-images/cloud%20walks%2053.jpg"
   },
   {
-    title: "NATURE RETREAT SUITE",
+    title: "PREMIUM HONEYMOON SUITE",
     image: "/original-images/cloud%20walks%2047.jpg"
   },
   {
