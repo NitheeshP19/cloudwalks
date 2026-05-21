@@ -95,16 +95,17 @@ export default function PreloadedImage({
             className="premium-preloader-pulse"
             style={{
               position: 'relative',
-              width: '60px',
-              height: '107px', // Matches the aspect ratio of the 9:16 logo provided (540x960)
+              width: '80px',
+              height: '80px', // Flexible square container, object-fit contain handles the exact ratio
               opacity: 0.85,
+              mixBlendMode: 'multiply', // Seamlessly blends white backgrounds into the gradient
             }}
           >
             <Image
-              src="/preloader.png"
+              src="/logo.png" // Using logo.png (71KB) instead of preloader.png (899KB) for instant loading
               alt="Loading..."
               fill
-              sizes="60px"
+              sizes="80px"
               style={{ objectFit: 'contain' }}
               priority
             />

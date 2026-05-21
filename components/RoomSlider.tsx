@@ -149,11 +149,10 @@ const RoomSlider = () => {
           {/* Left Button */}
           <button 
             onClick={() => scroll('left')}
-            className="slider-btn"
+            className="slider-btn left-btn"
             aria-label="Previous slide"
             style={{
               position: 'absolute',
-              left: '-20px',
               zIndex: 10,
               width: '45px',
               height: '45px',
@@ -242,11 +241,10 @@ const RoomSlider = () => {
           {/* Right Button */}
           <button 
             onClick={() => scroll('right')}
-            className="slider-btn"
+            className="slider-btn right-btn"
             aria-label="Next slide"
             style={{
               position: 'absolute',
-              right: '-20px',
               zIndex: 10,
               width: '45px',
               height: '45px',
@@ -296,9 +294,24 @@ const RoomSlider = () => {
           background-color: var(--primary) !important;
           color: white !important;
         }
+        .slider-btn.left-btn {
+          left: -20px;
+        }
+        .slider-btn.right-btn {
+          right: -20px;
+        }
         @media (max-width: 768px) {
           .slider-btn {
-            display: none !important;
+            width: 40px !important;
+            height: 40px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+            background-color: rgba(248, 245, 240, 0.95) !important;
+          }
+          .slider-btn.left-btn {
+            left: 5px !important;
+          }
+          .slider-btn.right-btn {
+            right: 5px !important;
           }
         }
       `}</style>

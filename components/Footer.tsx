@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const handleBookNow = (e: React.MouseEvent) => {
@@ -116,12 +117,20 @@ export default function Footer() {
 
           {/* ── BRAND COLUMN ── */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px', gridColumn: 'span 1' }}>
-            {/* Cloud Walks Logomark SVG */}
+            {/* Cloud Walks Logomark Image */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <circle cx="18" cy="18" r="17" stroke="white" strokeWidth="1"/>
-                <path d="M9 22C9 22 10 18 14 18C14 18 13 14 17 13C21 12 22 15 22 15C22 15 24 14 26 16C28 18 27 22 27 22" stroke="white" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
-              </svg>
+              <div style={{ position: 'relative', width: '72px', height: '72px' }}>
+                <Image 
+                  src="/logo.png" 
+                  alt="Cloud Walks Logo" 
+                  fill 
+                  sizes="72px"
+                  style={{ 
+                    objectFit: 'contain',
+                    filter: 'brightness(0) invert(1)' // Turns the dark logo completely white
+                  }} 
+                />
+              </div>
               <span style={{
                 fontFamily: 'var(--font-cinzel), serif',
                 fontSize: '1.25rem',
@@ -157,16 +166,12 @@ export default function Footer() {
             <div style={{ display: 'flex', gap: '14px', marginTop: '4px' }}>
               {[
                 {
-                  label: 'Instagram', href: '#',
+                  label: 'Instagram', href: 'https://www.instagram.com/cloudwalks_homestay?igsh=MTd4ZGN0aHp6dGloaw==',
                   icon: <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                 },
                 {
-                  label: 'Facebook', href: '#',
+                  label: 'Facebook', href: 'https://www.facebook.com/2165946173420371/',
                   icon: <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                },
-                {
-                  label: 'YouTube', href: '#',
-                  icon: <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
                 },
               ].map(({ label, href, icon }) => (
                 <a key={label} href={href} aria-label={label}
@@ -278,14 +283,24 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Email */}
-              <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+              {/* Email and Socials */}
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap' }}>
                 <div style={{ flexShrink: 0, width: '38px', height: '38px', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '2px' }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.75 }}><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
-                <div>
+                <div style={{ marginRight: '8px' }}>
                   <p style={{ fontFamily: 'var(--font-cinzel), serif', fontSize: '0.72rem', fontWeight: '700', color: '#ffffff', letterSpacing: '0.1em', margin: '0 0 5px 0', textTransform: 'uppercase' }}>Email</p>
-                  <a href="mailto:info@cloudwalks.com" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.88rem', color: 'rgba(255,255,255,0.45)', textDecoration: 'none', fontWeight: '400', transition: 'color 0.25s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.45)'}>info@cloudwalks.com</a>
+                  <a href="mailto:cloudwalkskkl@gmail.com" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.88rem', color: 'rgba(255,255,255,0.45)', textDecoration: 'none', fontWeight: '400', transition: 'color 0.25s' }} onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.45)'}>cloudwalkskkl@gmail.com</a>
+                </div>
+                
+                {/* Social Connect to the right */}
+                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                  <a href="https://www.instagram.com/cloudwalks_homestay?igsh=MTd4ZGN0aHp6dGloaw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '34px', height: '34px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '2px', color: 'rgba(255,255,255,0.75)', transition: 'all 0.3s' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#ffffff'; e.currentTarget.style.color = '#080808'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                  </a>
+                  <a href="https://www.facebook.com/2165946173420371/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '34px', height: '34px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '2px', color: 'rgba(255,255,255,0.75)', transition: 'all 0.3s' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#ffffff'; e.currentTarget.style.color = '#080808'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  </a>
                 </div>
               </div>
             </div>

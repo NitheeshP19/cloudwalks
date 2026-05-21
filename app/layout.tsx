@@ -32,10 +32,22 @@ export const metadata: Metadata = {
     "premium cottages Kodaikanal",
     "best resorts in Kodaikanal",
     "Kodaikanal luxury stay",
+    "premium stay in kodaikanal",
+    "kodaikanal honeymoon packages",
+    "wood house in kodaikanal",
+    "family friendly hotel kodaikanal"
   ],
   authors: [{ name: "Cloud Walks" }],
   creator: "Cloud Walks",
   publisher: "Cloud Walks Home Stay",
+  alternates: {
+    canonical: "https://cloudwalks.com",
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/logo.png', // Assuming logo.png is used as a fallback apple touch icon
+  },
   formatDetection: {
     email: false,
     address: false,
