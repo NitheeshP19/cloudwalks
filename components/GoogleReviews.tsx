@@ -174,7 +174,7 @@ const GoogleReviews = () => {
         scrollToIndex(next);
         return next;
       });
-    }, 4000);
+    }, 10000);
     return () => { if (autoScrollRef.current) clearInterval(autoScrollRef.current); };
   }, [isHovered, scrollToIndex]);
 
