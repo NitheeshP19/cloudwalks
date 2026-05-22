@@ -10,8 +10,4 @@ npm-debug.log
 
 media cache
 
-*.mp4
-*.mov
-*.zip
-!public/*.mp4
-!public/original-images/*.mp4
+

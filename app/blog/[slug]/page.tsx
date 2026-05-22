@@ -202,7 +202,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* ─── Hero Image Section ─── */}
       <section style={{ padding: '40px 5% 20px 5%' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{
+          <div className="article-hero-image-container" style={{
             position: 'relative',
             aspectRatio: '21 / 9',
             minHeight: '300px',
@@ -234,10 +234,10 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       {/* ─── Two-Column Article Layout ─── */}
       <section style={{ padding: '40px 5% 100px 5%' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', gap: '4rem', flexWrap: 'wrap' }}>
+        <div className="article-layout-container" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', gap: '4rem', flexWrap: 'wrap' }}>
           
           {/* Main Article Body Column */}
-          <article style={{ flex: '1 1 700px', maxWidth: '800px' }}>
+          <article className="article-main-content" style={{ flex: '1 1 700px', maxWidth: '800px' }}>
             {post.content.map((block, index) => {
               switch (block.type) {
                 case 'paragraph':
@@ -325,6 +325,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   return (
                     <div 
                       key={index} 
+                      className="article-table-wrapper"
                       style={{ 
                         overflowX: 'auto', 
                         marginBottom: '2.5rem', 
@@ -388,6 +389,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   return (
                     <div 
                       key={index} 
+                      className="article-highlight"
                       style={{
                         borderLeft: '4px solid var(--primary)',
                         backgroundColor: 'rgba(197, 160, 89, 0.04)',
@@ -411,6 +413,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   return (
                     <div 
                       key={index} 
+                      className="article-cta"
                       style={{
                         backgroundColor: '#ffffff',
                         border: '1px solid rgba(197, 160, 89, 0.25)',
@@ -446,7 +449,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </article>
 
           {/* Sidebar Column (Sticky Widgets) */}
-          <aside style={{ flex: '1 1 300px', maxWidth: '360px' }}>
+          <aside className="article-sidebar" style={{ flex: '1 1 300px', maxWidth: '360px' }}>
             <div style={{ position: 'sticky', top: '120px', display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
               
               {/* Table of Contents Widget */}
@@ -728,8 +731,39 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Styled inline components */}
       <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 991px) {
+          .article-layout-container {
+            gap: 2.5rem !important;
+          }
+          .article-sidebar {
+            flex: 1 1 100% !important;
+            max-width: 100% !important;
+          }
           .meta-divider {
             display: none !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .article-hero-image-container {
+            aspect-ratio: 16 / 10 !important;
+            min-height: 220px !important;
+          }
+          .article-main-content {
+            flex: 1 1 100% !important;
+            max-width: 100% !important;
+          }
+          .article-highlight {
+            padding: 1.5rem 1.25rem !important;
+            font-size: 1rem !important;
+            margin: 1.5rem 0 !important;
+          }
+          .article-cta {
+            padding: 2.2rem 1.4rem !important;
+            margin: 2.5rem 0 !important;
+          }
+          .article-table-wrapper th,
+          .article-table-wrapper td {
+            padding: 0.8rem 0.9rem !important;
+            font-size: 0.85rem !important;
           }
         }
         .article-card:hover {

@@ -196,7 +196,7 @@ const BlogClient = () => {
               className="featured-post-container"
             >
               {/* Cover Image */}
-              <div style={{ flex: '1 1 600px', position: 'relative', minHeight: '400px', overflow: 'hidden' }}>
+              <div className="featured-post-image-container" style={{ flex: '1 1 600px', position: 'relative', minHeight: '400px', overflow: 'hidden' }}>
                 <PreloadedImage
                   src={featuredPost.coverImage}
                   alt={featuredPost.title}
@@ -223,7 +223,7 @@ const BlogClient = () => {
               </div>
 
               {/* Text Details */}
-              <div style={{ flex: '1 1 450px', padding: '3.5rem 3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.5rem' }}>
+              <div className="featured-post-text-container" style={{ flex: '1 1 450px', padding: '3.5rem 3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.8rem', color: '#666666' }}>
                   <span>{featuredPost.publishedAt}</span>
                   <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--primary)' }} />
@@ -685,9 +685,13 @@ const BlogClient = () => {
           .featured-post-container {
             flex-direction: column !important;
           }
-          .featured-post-container > div {
+          .featured-post-image-container {
             min-height: 250px !important;
-            padding: 2rem 1.5rem !important;
+            padding: 0 !important;
+          }
+          .featured-post-text-container {
+            padding: 2.5rem 1.5rem !important;
+            min-height: auto !important;
           }
         }
       `}} />
